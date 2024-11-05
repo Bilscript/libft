@@ -12,21 +12,11 @@
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	dsize;
-	unsigned int	ssize;
-	unsigned int	i;
+	size_t	dsize;
+	size_t	ssize;
+	size_t	i;
 
 	dsize = ft_strlen(dest);
 	ssize = ft_strlen(src);
@@ -41,14 +31,3 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[dsize + i] = '\0';
 	return (dsize + ssize);
 }
-
-/*
-int main()
-{
-	char dest[100] = "cect est un test de la fonction strlcat";
-	char *src = "Pour les piscineux francophone !";
-	printf("Avant: \n%s\n\n",dest);
-	unsigned int result = ft_strlcat(dest, src, 42);
-	printf("Apres:\n%s\nDest fait %d caracteres.",dest, result);
-}
-*/
