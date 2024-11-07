@@ -31,8 +31,8 @@ fclean:	clean
 
 re:	fclean all
 
-bonus:	all ${OBJSBONUS}
-	ar rc ${NAME} ${OBJSBONUS}
-	ranlib ${NAME}
+#bonus:	all ${OBJSBONUS}
+#	ar rc ${NAME} ${OBJSBONUS}
+#	ranlib ${NAME}
 
-.PHONY:	clean fclean all re bonus
+.PHONY:	clean fclean all re #bonus

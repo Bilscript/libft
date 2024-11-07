@@ -52,17 +52,17 @@ int			ft_atoi(char *str);
 void		*ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t elementCount, size_t elementSize);
 int			ft_isalpha(int c);
-int			ft_isalpha(int c);
-int			ft_isacii(int c);
+int			ft_isalnum(int c);
+int			ft_isascii(int c);
 int			ft_isdigit(int c);
-int			ft_isacii(int c);
+int			ft_isprint(int c);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 size_t		ft_strlcpy(char *dest, char *src, size_t size);
-char		*itoa(int nb);
+char		*ft_itoa(int nb);
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
@@ -73,5 +73,6 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 size_t		ft_strlcat(char *dest, char *src, size_t size);
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
