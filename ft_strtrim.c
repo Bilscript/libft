@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end > start && ft_isset(s1[end - 1], set))
 		end--;
-	result = (char *)malloc((end - start + 1) * sizeof(char));
+	result = (char *)malloc((end - start + 1));
 	if (!result)
 		return (NULL);
 	while (start < end)

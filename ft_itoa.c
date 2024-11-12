@@ -6,7 +6,7 @@
 /*   By: bhamani <bhamani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:36:42 by bhamani           #+#    #+#             */
-/*   Updated: 2024/11/07 18:13:41 by bhamani          ###   ########.fr       */
+/*   Updated: 2024/11/12 05:51:14 by bhamani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,18 @@ int	ft_countnbr(int nb)
 		nb /= 10;
 		len++;
 	}
+	if (nb < 0)
+		len++;
 	return (len);
+}
+
+char	*check_limit(int nb)
+{
+	if (nb == 0)
+		return (ft_strdup("0"));
+	if (nb == -2147483648)
+		return (ft_strdup("-2147483648"));
+	return (0);
 }
 
 char	*ft_itoa(int nb)
@@ -33,28 +44,29 @@ char	*ft_itoa(int nb)
 
 	i = 0;
 	len = ft_countnbr(nb);
+	res = check_limit(nb);
+	if (res)
+		return (res);
+	res = malloc((len + 2));
+	if (!res)
+		return (0);
 	if (nb < 0)
 	{
-		res = malloc((len + 2) * sizeof (char));
 		res[0] = '-';
-		if (nb == -2147483648)
-			res = "-2147483648";
-		else
 		nb = -nb;
 		len++;
 	}
-	else
-		res = malloc((len + 1) * sizeof (char));
 	while (nb)
 	{
-		res[len - i - 1] = ((nb % 10) + '0');
+		res[len - i++ - 1] = ((nb % 10) + '0');
 		nb /= 10;
-		i++;
 	}
 	res[len] = '\0';
 	return (res);
 }
+
+/*
 int main()
 {
-	printf("%s",ft_itoa(0));
-}
+	printf("%s",ft_itoa(-0));
+}*/
