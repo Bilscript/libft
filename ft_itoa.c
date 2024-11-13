@@ -6,7 +6,7 @@
 /*   By: bhamani <bhamani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:36:42 by bhamani           #+#    #+#             */
-/*   Updated: 2024/11/12 05:51:14 by bhamani          ###   ########.fr       */
+/*   Updated: 2024/11/12 21:37:21 by bhamani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int	ft_countnbr(int nb)
 	int	len;
 
 	len = 0;
+	if (nb < 0)
+		len++;
 	while (nb)
 	{
 		nb /= 10;
 		len++;
 	}
-	if (nb < 0)
-		len++;
 	return (len);
 }
 
@@ -47,14 +47,13 @@ char	*ft_itoa(int nb)
 	res = check_limit(nb);
 	if (res)
 		return (res);
-	res = malloc((len + 2));
+	res = (char *)malloc((len + 1) * sizeof (char));
 	if (!res)
 		return (0);
 	if (nb < 0)
 	{
 		res[0] = '-';
 		nb = -nb;
-		len++;
 	}
 	while (nb)
 	{
@@ -64,9 +63,3 @@ char	*ft_itoa(int nb)
 	res[len] = '\0';
 	return (res);
 }
-
-/*
-int main()
-{
-	printf("%s",ft_itoa(-0));
-}*/
