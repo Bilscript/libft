@@ -46,24 +46,53 @@ Voici un aperçu des fonctions implémentées dans **Libft** :
 ### 🔹 Fonctions de la bibliothèque standard
 
 - `ft_memset` - Remplit une zone mémoire avec une valeur spécifiée.
+- `ft_bzero` - Met à zéro les octets d’une zone mémoire.
+- `ft_memcpy` - Copie une zone mémoire vers une autre.
+- `ft_memmove` - Copie une zone mémoire vers une autre, même si elles se chevauchent.
+- `ft_memchr` - Recherche la première occurrence d’un caractère dans une zone mémoire.
+- `ft_memcmp` - Compare deux zones mémoires.
 - `ft_strlen` - Calcule la longueur d'une chaîne de caractères.
-- `ft_strcpy` - Copie une chaîne de caractères.
-- `ft_strdup` - Duplique une chaîne de caractères.
-- (Ajoutez les autres fonctions que vous avez implémentées...)
+- `ft_strlcpy` - Copie une chaîne avec une taille maximale spécifiée.
+- `ft_strlcat` - Concatène deux chaînes avec une taille maximale spécifiée.
+- `ft_strchr` - Trouve la première occurrence d'un caractère dans une chaîne.
+- `ft_strrchr` - Trouve la dernière occurrence d'un caractère dans une chaîne.
+- `ft_strncmp` - Compare les premiers n caractères de deux chaînes.
+- `ft_strnstr` - Localise une sous-chaîne dans une chaîne, jusqu’à une longueur maximale.
+- `ft_atoi` - Convertit une chaîne de caractères en un entier.
+- `ft_isalpha` - Vérifie si un caractère est alphabétique.
+- `ft_isdigit` - Vérifie si un caractère est un chiffre.
+- `ft_isalnum` - Vérifie si un caractère est alphanumérique.
+- `ft_isascii` - Vérifie si un caractère appartient au code ASCII.
+- `ft_isprint` - Vérifie si un caractère est imprimable.
+- `ft_toupper` - Convertit un caractère en majuscule.
+- `ft_tolower` - Convertit un caractère en minuscule.
 
 ### 🔹 Fonctions supplémentaires
 
-- `ft_substr` - Extrait une sous-chaîne à partir d'une chaîne de caractères.
-- `ft_strjoin` - Concatène deux chaînes.
-- `ft_split` - Sépare une chaîne en sous-chaînes suivant un délimiteur donné.
-- (Ajoutez les autres fonctions que vous avez implémentées...)
+- `ft_substr` - Extrait une sous-chaîne d'une chaîne de caractères.
+- `ft_strjoin` - Concatène deux chaînes en une nouvelle.
+- `ft_strtrim` - Supprime les caractères spécifiques du début et de la fin d'une chaîne.
+- `ft_split` - Sépare une chaîne en sous-chaînes selon un délimiteur donné.
+- `ft_itoa` - Convertit un entier en une chaîne de caractères.
+- `ft_strmapi` - Applique une fonction à chaque caractère d’une chaîne, en créant une nouvelle chaîne.
+- `ft_striteri` - Applique une fonction à chaque caractère d’une chaîne, directement sur la chaîne d’origine.
+- `ft_putchar_fd` - Écrit un caractère dans un descripteur de fichier donné.
+- `ft_putstr_fd` - Écrit une chaîne de caractères dans un descripteur de fichier donné.
+- `ft_putendl_fd` - Écrit une chaîne suivie d'un saut de ligne dans un descripteur de fichier donné.
+- `ft_putnbr_fd` - Écrit un nombre dans un descripteur de fichier donné.
 
-### 🔹 Fonctions bonus (si réalisées)
+### 🔹 Fonctions bonus
 
-- `ft_lstnew` - Crée un nouvel élément de liste.
+- `ft_lstnew` - Crée un nouvel élément de liste chaînée.
 - `ft_lstadd_front` - Ajoute un nouvel élément au début de la liste.
+- `ft_lstsize` - Calcule le nombre d'éléments dans une liste chaînée.
+- `ft_lstlast` - Renvoie le dernier élément de la liste.
+- `ft_lstadd_back` - Ajoute un nouvel élément à la fin de la liste.
+- `ft_lstdelone` - Libère un élément de la liste.
+- `ft_lstclear` - Libère tous les éléments de la liste.
 - `ft_lstiter` - Applique une fonction à chaque élément de la liste.
-- (Ajoutez les autres fonctions de listes que vous avez implémentées...)
+- `ft_lstmap` - Crée une nouvelle liste en appliquant une fonction à chaque élément de la liste.
+
 
 ## 📝 Exemples
 
