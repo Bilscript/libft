@@ -8,7 +8,6 @@
 - [📂 Structure du projet](#structure-du-projet)
 - [💻 Compilation et Utilisation](#compilation-et-utilisation)
 - [📋 Aperçu des Fonctions](#aperçu-des-fonctions)
-- [📝 Exemples](#exemples)
 - [🔗 Ressources](#ressources)
 
 ---
@@ -94,25 +93,6 @@ Voici un aperçu des fonctions implémentées dans **Libft** :
 - `ft_lstmap` - Crée une nouvelle liste en appliquant une fonction à chaque élément de la liste.
 
 
-## 📝 Exemples
-
-Voici un exemple simple d’utilisation de **Libft** :
-
-```c
-#include "libft.h"
-
-int main(void)
-{
-    char *str = "Hello, 42!";
-    char *duplicate = ft_strdup(str);
-
-    printf("Original : %s\n", str);
-    printf("Dupliqué : %s\n", duplicate);
-
-    free(duplicate);
-    return 0;
-}
-```
 ## 🔗 Ressources
 
 Voici quelques ressources utiles pour approfondir vos connaissances :
